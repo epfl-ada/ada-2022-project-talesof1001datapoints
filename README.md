@@ -14,11 +14,10 @@ Therefore, we want to characterize the distribution of gender and ethnicity acro
 We will focus our analysis on two main interrogations:
 
 
-* **How has representativity in movies evolved?** 
+### How has representativity in movies evolved?
 
 With the characters dataframe and the year of release of the movies we will see if an evolution has occurred with time. This analysis will be segmented on the gender as well as the ethnicity.
-
-* **How does representativity impact a movie’s critical and commercial success?**
+### How does representativity impact a movie’s critical and commercial success?
 
 We will use the box office revenue as a metric of commercial success. As a metric of critical success we extend our dataset with the Rotten Tomatoes score of movies [cf. Added data section]. We will then be able to see if certain type of representation impact negatively one or the other success.
 
@@ -40,14 +39,14 @@ We query this data from the Wikidata page of each movie. We also querry the numb
 
 
 ## Methods
-* **Get genre score**
+### Get genre score
 
 We want to create 2 scores to represent gender diversity. 
 
 1. *Actor score*: this will be based on the ratio between the number of female and male actors who played in the movie.
 2. *Synopsis score*: we will use the tool "Empath" to analyze the synopsis of the movies. As we can find on its Github page: Empath is a tool for analyzing text across lexical categories (similar to LIWC), and also generating new lexical categories to use for an analysis. Therefore, we will analyze the presence of the categories "masculine" and "feminine" in the synopsis.   
 
-* **Get ethnicity score**
+### Get ethnicity score
 
 Firstly, we need to regroup specific ethnicities into big categories. Let me give an example to illustrate this point. In our dataset, one actor has the etnhicity: "Sri Lankan living in Switzerland". This specific ethnicity would be classed into the big category :"Asian". As we have 479 different ethnicities, we can class them by hand into a fewer number of "general ethnicities".
 
@@ -55,12 +54,17 @@ Then, we will create 2 scores to represent ethniciteis representativity.
 1. *Rough score*: this score will be equal to the number of actors of a specific ethnicity who played in a movie. For example: the rough score of "black people" in the movie "men in black" is equal to 1 because there is one black actor in the movie. 
 2. *Precise score*: this score is equivalent to the previous one, but we will weight the Rough score with the importance of characters in the movies. To assess the importance of every character, we will run a frequence analysis on the number of time that the character name's appear in the synopsis. 
 
-* **Look at the evolution of these score through time**
+### Look at the evolution of these score through time
 
 In order to do this, we will plot the gender and etnicity scores in fonction of the year of release of the movies. We will then do linear regressions to exctract general trends of the evolution of diversity. 
 
-* **Fined grained analysis of representativity (across movie types and country of production of the movie)**
-* **Regression between representativity and commercial/critical success**
+### Fined grained analysis of representativity (across type and country of production of the movies)
+
+
+### Regression between representativity and commercial/critical success
+
+The rotten tomato scores represent the success of the movies amoung critics. Whereas, the box office revenue represent the commercial success. 
+We will do a regression 
 
 
 ## Proposed timeline
