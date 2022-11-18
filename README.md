@@ -1,4 +1,4 @@
-# Representation on screen and its impact on a film's appreciation
+# Representativity on screen and its impact on a film's appreciation
 
 ___ ___
 
