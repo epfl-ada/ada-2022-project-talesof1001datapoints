@@ -2,11 +2,9 @@
 
 <br>
 <br>
-```html
 <p style="text-align: center;">
   <a href="https://nmuenger.github.io/2022_ada_datastory"><font size="5"><b>Project website link</b></font></a>
 </p>
-```
 <br>
 
 ## Abstract
