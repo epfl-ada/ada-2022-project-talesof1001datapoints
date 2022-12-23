@@ -2,13 +2,11 @@
 
 <br>
 <br>
-<font size="5">
 <p align="center">
   <b>
-      <a href="https://nmuenger.github.io/2022_ada_datastory">Project website link</a>
+      <a href="https://nmuenger.github.io/2022_ada_datastory"><font size="5">Project website link</font></a>
   </b>
 </p>
-</font>
 <br>
 
 ## Abstract
