@@ -1,5 +1,6 @@
 # Representativity on screen and its impact on a film's appreciation
 
+**[Website link](https://nmuenger.github.io/2022_ada_datastory/)** 
 ___ ___
 
 ## Abstract
@@ -11,20 +12,14 @@ Therefore, we want to characterize the distribution of gender and ethnicity acro
 
 ## Research questions
 
-We will focus our analysis on three main interrogations:
+We will focus our analysis on two main interrogations:
 
-### How is representativity distributed across type of movies and countries of production
- 
-We think that the representativity will not be the same among types of movies and maybe countries of production.. For example: we might see that there is a good gender representativity in French romantic movies. Whereas we have a very bad one in American action movies. The idea of this research question is to find these discrepancies. 
+### How is representativity distributed across cinematography genre, countries of production and time ?
+The theme of representativeness has become increasingly important in the public sphere in recent years, but can this trend be seen in film? Are there regional anomalies? Are there discrepancies between film genres? We will try to answer these questions. In this section we will take a descriptive approach in order to highlight the different aspects of representativeness in the cinema.
 
-### How has representativity in movies evolved?
-
-With the characters dataframe and the year of release of the movies, we will see if an evolution has occurred with time. This analysis will be segmented on the gender as well as the ethnicity.
 
 ### How does representativity impact a movie’s critical and commercial success?
-
-We will use the box office revenue as a metric of commercial success. As a metric of critical success we extend our dataset with the Rotten Tomatoes score of movies [cf. Added data section]. We will then be able to see if certain type of representation impact negatively one or the other success.
-
+Our first question looks at differences in representation within the film industry, but how are they perceived? Do they affect public opinion? Does this affect the box-office scores of the films? These are the questions we will try to answer in this second part. With an analytical approach this time, we will try to measure the impact that representativeness can have on the cinema and on the public.
 
 ## Proposed additional datasets
 
@@ -44,58 +39,53 @@ We query this data from the Wikidata page of each movie. We also query the numbe
 
 
 ## Methods
-### 1. Get gender score
 
-We want to create 2 scores to represent gender diversity. 
+### 1. Get the importance of the characters in a movie
 
-1. *Actor score*: this will be based on the ratio between the number of female and male actors who played in the movie.
-2. *Synopsis score*: we will use the Empath library to analyze the synopsis of the movies. As we can find on its  [Github page](https://github.com/Ejhfast/empath-client): Empath is a tool for analyzing text across lexical categories (similar to LIWC), and also generating new lexical categories to use for analysis. Therefore, we will analyze the presence of the categories "masculine" and "feminine" in the synopsis.   
+To assess the importance of every character in a movie, we will firstly do a correference resolution with the name of the characters in the synopsis. And then run a frequency analysis on the number of times that the character's name appears in the synopsis.
+We give more points to the characters that appear sonner in the synopsis.
 
-### 2. Get ethnicity score
+### 2. Get gender score
+
+The gender score takes into account 3 things:
+1. Ratio between the number of female and male actors who played in the movie.
+2. The repartition if the importance of roles among males and females actors. 
+3. We will use the Empath library to analyze the synopsis of the movies. As we can find on its  [Github page](https://github.com/Ejhfast/empath-client): Empath is a tool for analyzing text across lexical categories (similar to LIWC), and also generating new lexical categories to use for analysis. Therefore, we will analyze the presence of the categories "masculine" and "feminine" in the synopsis.   
+
+
+### 3. Get ethnicity score
 
 Firstly, we need to regroup specific ethnicities into broader categories. One telling example is that in our dataset, one actor has the ethnicity: "Sri Lankan living in Switzerland". This specific ethnicity would be re-classified into the more general "Asian" category. As we have 479 different ethnicities, we can class them by hand into a fewer number of "general ethnicities".
-Then, we will create two scores to represent ethnicity representativity.
-Rough score: this score will be equal to the number of actors of a specific ethnicity who played in a movie. As a basic example, the rough score of "black people" in the movie "men in black" is equal to 1 because there is one African American actor in the movie.
-Precise score: this score is equivalent to the previous one, but we will weigh the Rough score with the importance of characters in the movies. To assess the importance of every character, we will run a frequency analysis on the number of times that the character's name appears in the synopsis.
 
+Once this is done, we will only take into account these "broader ethnicities". 
+The ethnicity score takes into account 3 things:
+1. The number of ethnicites that are reprenseted in total in the movie 
+2. The relative importance of the ethnicity (i.e. you get more points if you have an ethnicty that is not much represented already)
+3. The repartition of character importances among ethnicities
 
-### 3. Look at the evolution of these score through time
+### 4. How is representativity distributed across cinematography genre, countries of production and time. 
 
-In order to do this, we will plot the gender and ethnicity scores in function of the year of release of the movies. We will then do linear regressions to extract general trends of the evolution of diversity. 
+Once our metrics are computed, we want to analyze their distribution among: cinematography genre, countries of production and time.
+And see if we can get some interestign trends. 
 
-### 4. Fined-grained analysis of representativity (across type and country of production of the movies)
-
-As we can not analyze all the types and countries of production of movies, we will only keep the most represented movie genres, and we will cherry-pick the countries that we find interesting. 
-
-For every “interesting” country, we will present scatter plots on the X-axis: the genres of movies. And on the Y-axis: the previously computed gender and ethnicity scores.
- 
-
-### 5. Regression between representativity and commercial/critical success
+### 5. Observationnal study
 
 The Rotten Tomatoes scores represent the success of the movies among critics. Whereas, the box office revenue represents the commercial success. 
-We will do a regression over these two success metrics. The input features for these regressions will be the previously computed ethnicity and gender scores. 
+The idea is to understand how the diversity in movies impact their succes. 
+
+Therefore, we will do an observationnal to eliminate cofonders: year of production, country of production and genre of the movie with exact matching and propensity score matching.
+
+We will then be able to analyze if movies have a higger success if they have a low or high diversity.
 
 ### 6. Creation of the data story’s website
 
 The final step will be to create a cohesive story and to format it on a GitHub webpage. 
 
-
-## Proposed timeline
-
-* Step 1: 02-dec-2022
-* Step 2: 02-dec-2022
-* Step 3: 09-dec-2022
-* Step 4: 09-dec-2022
-* Step 5: 13-dec-2022
-* Step 6: 19-dec-2022
-
 ## Organization within the team
 
 * Step 1: Malek
-* Step 2: Henry
-* Step 3: Nico
-* Step 4: Baptiste 
-* Step 5: Malek
-* Step 6: Everybody 
-
-
+* Step 2: Baptiste
+* Step 3: Baptiste
+* Step 4: Nicolas 
+* Step 5: Henry
+* Step 6: Nicolas, Baptiste, Henry 
