@@ -4,7 +4,9 @@
 <br>
 <p align="center">
   <b>
-    <a href="https://nmuenger.github.io/2022_ada_datastory">Project website link</a>
+    <font size="5">
+      <a href="https://nmuenger.github.io/2022_ada_datastory">Project website link</a>
+    </font>
   </b>
 </p>
 <br>
