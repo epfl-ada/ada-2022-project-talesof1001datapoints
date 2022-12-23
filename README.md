@@ -3,7 +3,7 @@
 <br>
 <br>
 <p align="center">
-  <a href="https://nmuenger.github.io/2022_ada_datastory">Project website link</a>
+  <a href="https://nmuenger.github.io/2022_ada_datastory"<b>Project website link</b></a>
 </p>
 <br>
 
