@@ -1,14 +1,14 @@
 # Representativity on screen and its impact on a film's appreciation
 
-**[Website link](https://nmuenger.github.io/2022_ada_datastory/)** 
+___ ___
+# **[Website link](https://nmuenger.github.io/2022_ada_datastory/)**
 ___ ___
 
 ## Abstract
 
-A survey conducted on two thousand British adults showed that people watch TV for 78’000 hours on average in their lifetime. This number shows that movies have a significant role in our society. We also think that representativity is a crucial factor to achieve an inclusive society. For example, main characters of movies can act as role models and inspire young generations. We believe that representativity has been neglected in the past but interestingly, people seem to be more and more concerned about this issue. 
-Therefore, we want to characterize the distribution of gender and ethnicity across movie characters. We also want to analyze the evolution of representativity in time to understand if the movie industry is going in the right direction. Finally, we will infer how the public and critics react to diversity by analyzing the critics review and box office revenue of movies. 
-
-
+Television and especially films play a crucial role in our modern society. The main characters in films serve as role models and inspire the younger generation, who may spend up to 78,000 hours watching television in their lifetime, as a survey of 2,000 British adults has shown.
+Furthermore, the growing public interest in the issue of representativeness has led us to study it through the cinema, believing that it plays a crucial role in achieving a more inclusive society.
+To do this, we use a large database of films, and construct two indicators to measure gender and ethnic representation within a film. We then look at the evolution of the latter over time, across the main film genres, as well as across the different countries of the world. Finally, we will try to show how representativeness is perceived by the general public, by analysing the reviews and the box-office revenues of films.
 
 ## Research questions
 
@@ -55,7 +55,7 @@ The gender score takes into account 3 things:
 
 ### 3. Get ethnicity score
 
-Firstly, we need to regroup specific ethnicities into broader categories. One telling example is that in our dataset, one actor has the ethnicity: "Sri Lankan living in Switzerland". This specific ethnicity would be re-classified into the more general "Asian" category. As we have 479 different ethnicities, we can class them by hand into a fewer number of "general ethnicities".
+Firstly, we need to regroup specific ethnicities into broader categories. One telling example is that in our dataset, one actor has the ethnicity: "Sri Lankan living in Switzerland". This specific ethnicity would be re-classified into the more general "South Asian" category. As we have 479 different ethnicities, we can class them by hand into a fewer number of "general ethnicities".
 
 Once this is done, we will only take into account these "broader ethnicities". 
 The ethnicity score takes into account 3 things:
